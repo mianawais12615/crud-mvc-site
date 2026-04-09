@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+
 function App() {
   const [products, setProducts] = useState([]);
   const [newProductsForm, setNewProductsForm] = useState({
@@ -28,7 +30,7 @@ function App() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const apiRes = await axios.get("http://localhost:8000/products");
+        const apiRes = await axios.get(`${API_URL}/products`);
         setProducts(apiRes.data);
         console.log(apiRes.data);
       } catch (err) {
@@ -52,7 +54,7 @@ function App() {
         return;
       }
 
-      await axios.post("http://localhost:8000/products", {
+      await axios.post(`${API_URL}/products`, {
         id: newProductsForm.id,
         name: newProductsForm.name,
         price: newProductsForm.price,
@@ -61,7 +63,7 @@ function App() {
       });
       alert("Data has been Saved!");
 
-      const apiRes = await axios.get("http://localhost:8000/products");
+      const apiRes = await axios.get(`${API_URL}/products`);
       setProducts(apiRes.data);
 
       // Reset the form!!!!
@@ -97,12 +99,12 @@ function App() {
       if (newProductsForm.img) updateData.img = newProductsForm.img;
 
       await axios.put(
-        `http://localhost:8000/products/${newProductsForm.id}`,
+        `${API_URL}/products/${newProductsForm.id}`,
         updateData,
       );
       alert("Product has been Updated!");
 
-      const apiRes = await axios.get("http://localhost:8000/products");
+      const apiRes = await axios.get(`${API_URL}/products`);
       setProducts(apiRes.data);
 
       setNewProductsForm({
@@ -123,11 +125,11 @@ function App() {
     e.preventDefault();
     try {
       await axios.delete(
-        `http://localhost:8000/products/${newProductsForm.id}`,
+        `${API_URL}/products/${newProductsForm.id}`,
       );
       alert("Product has been Deleted!");
 
-      const apiRes = await axios.get("http://localhost:8000/products");
+      const apiRes = await axios.get(`${API_URL}/products`);
       setProducts(apiRes.data);
 
       setNewProductsForm({
