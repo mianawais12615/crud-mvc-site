@@ -1,16 +1,16 @@
 :root {
-  --primary-color: #10b981;
-  --secondary-color: #059669;
-  --accent: #f59e0b;
-  --bg-dark: #0a0e1a;
-  --bg-gradient: linear-gradient(135deg, #0a0e1a 0%, #1a1f35 50%, #0f172a 100%);
-  --glass-bg: rgba(16, 185, 129, 0.05);
-  --glass-border: rgba(16, 185, 129, 0.15);
+  --primary-color: #6366f1;
+  --secondary-color: #8b5cf6;
+  --accent: #d946ef;
+  --bg-dark: #0f0a1e;
+  --bg-gradient: linear-gradient(135deg, #0f0a1e 0%, #1a0f2e 50%, #0a0514 100%);
+  --glass-bg: rgba(99, 102, 241, 0.05);
+  --glass-border: rgba(99, 102, 241, 0.15);
   --text-primary: #f8fafc;
   --text-secondary: rgba(248, 250, 252, 0.65);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-  --glow: 0 0 30px rgba(16, 185, 129, 0.3);
+  --glow: 0 0 30px rgba(139, 92, 246, 0.3);
 }
 
 body {
@@ -36,7 +36,7 @@ body {
 }
 
 .main-heading h1 {
-  background: linear-gradient(120deg, var(--primary-color), var(--accent), var(--secondary-color));
+  background: linear-gradient(120deg, #6366f1, #8b5cf6, #d946ef, #ec4899);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -45,7 +45,7 @@ body {
   margin: 0;
   letter-spacing: -0.5px;
   text-transform: uppercase;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.5));
 }
 
 form {
