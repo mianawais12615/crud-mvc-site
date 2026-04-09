@@ -157,7 +157,7 @@ function App() {
   return (
     <>
       <div className="main-heading">
-        <h1>API Data Handling</h1>
+        <h1>E-Commerce</h1>
       </div>
       <br />
       <form onSubmit={handleFormSubmit}>
@@ -165,7 +165,7 @@ function App() {
           type="number"
           name="id"
           id="id"
-          placeholder="Enter your product's id"
+          placeholder="Product's id"
           onChange={handleNewProductsFormChange}
           value={newProductsForm.id || ""}
           required
@@ -175,7 +175,7 @@ function App() {
           type="text"
           name="name"
           id="name"
-          placeholder="Enter your product's name"
+          placeholder="product's name"
           onChange={handleNewProductsFormChange}
           value={newProductsForm.name}
           disabled={mode === "delete"}
@@ -185,7 +185,7 @@ function App() {
           type="number"
           name="price"
           id="price"
-          placeholder="Enter your product's price"
+          placeholder="Product's price"
           onChange={handleNewProductsFormChange}
           value={newProductsForm.price || ""}
           disabled={mode === "delete"}
@@ -195,7 +195,7 @@ function App() {
           type="text"
           name="desc"
           id="desc"
-          placeholder="Enter your product's description"
+          placeholder="Product's description"
           onChange={handleNewProductsFormChange}
           value={newProductsForm.desc}
           disabled={mode === "delete"}
